@@ -3,10 +3,7 @@ Takes given letters and determines what words can be made from them.
 The dictionary provided is [this one](https://raw.githubusercontent.com/dwyl/english-words/master/words_alpha.txt), but any list of words will work as long as it is named words.txt (or the code is edited appropriately). 
 
 ## Usage
-```python3 anagramSolver.py```
-or
-
-```./anagramSolver.py```
+```python3 anagramSolver.py``` or ```./anagramSolver.py```
 
 ./ can be replaced with the path to the script if it is not in your current directory.
 If you plan on using this frequently I recommend you put it in your /usr/bin folder and setting an alias.  This lets you use it from anywhere with just the name of the script (or whatever you set the alias to).  You also need to move the dictionary.
