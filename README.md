@@ -11,4 +11,4 @@ If you are using Python 2, you will need to change the comment at the top of the
 
 After a dictionary is loaded you will be prompted for letters to find anagrams for.  When it is finished searching it will give a list of all words in the dictionary that are some combination and subset of those letters.  These are sorted by length starting with the longest words because I imagine this will be most frequently used for word games.
 
-This will run forever until you close it.  If you are in a terminal, Ctrl+C does the trick.
+This will run forever until you close it.  For Linux, it's usually Ctrl+C; for Windows, Ctrl+Z.
