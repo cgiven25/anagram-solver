@@ -13,7 +13,7 @@ def main():
         print()
 
         while 1:
-            letters = list(input("Letters: "))
+            letters = list(input("Letters (? for wildcard): "))
             print("Finding anagrams...")
             print()
 
@@ -24,16 +24,20 @@ def main():
                 anagram = True
                 for letter in word:
                     if letter not in currentLetters:
-                        anagram = False
-                        break
-                    currentLetters.remove(letter)
+                        if "?" in currentLetters:
+                            currentLetters.remove("?")
+                        else:
+                            anagram = False
+                            break
+                    else:
+                        currentLetters.remove(letter)
                 if anagram:
                     anagrams.append("".join(word))
 
             # Sorts the list of anagrams.  The key is a function that returns the length of the elements.
             # Sorted in ascending order so I had to reverse them.
             anagrams.sort(key = lambda s: len(s))
-            anagrams.reverse()
+            anagrams = [word for word in anagrams if len(word) > 1]
 
             for word in anagrams:
                 print(word)
@@ -51,6 +55,7 @@ def main():
             sleep(.25)
 
     except KeyboardInterrupt:
+        print()
         exit(0)
     # FileNotFoundError does not exist in Python 2 so I have to use the base class
     except EnvironmentError:
